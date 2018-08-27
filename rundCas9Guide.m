@@ -43,7 +43,7 @@ for ng=1:numofguides
  guide1=new;
  buenosstring=CatguideRNA(ng,:);
  buenosstring(buenosstring=='A')='1';buenosstring(buenosstring=='C')='2';buenosstring(buenosstring=='T')='3';buenosstring(buenosstring=='G')='4';
-for n=1:20-NMatchesGuide%remove sequences with similairty to the guide RNAs
+for n=1:20-NMatchesGuide+1%remove sequences with similairty to the guide RNAs
      newStr=guide1(1,n:n+NMatchesGuide-1);
      newStr=num2str(newStr); newStr(newStr==' ')='';
      TS=~isempty(strfind(buenosstring,newStr));
